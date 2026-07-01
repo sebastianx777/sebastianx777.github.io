@@ -223,6 +223,29 @@
   footer a{ color:var(--text-dim); text-decoration:none; }
   footer a:hover{ color:var(--accent); }
 
+
+  .role-list{
+    color:var(--text-dim);
+    font-size:15px;
+    max-width:60ch;
+    padding-left:18px;
+  }
+  .role-list li{
+    margin-bottom:8px;
+  }
+  .sub-role{
+    margin-bottom:22px;
+  }
+  .sub-role:last-child{
+    margin-bottom:0;
+  }
+  .sub-role h4{
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--accent);
+    margin-bottom:8px;
+  }
+
   @media (max-width: 640px){
     .role{ grid-template-columns:1fr; gap:4px; }
     header.hero{ padding:56px 0 40px; }
@@ -245,7 +268,7 @@
 
     <div class="actions">
       <a class="btn primary" href="#projects">View projects</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/sebastian-lopez777/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/sebastian-lopez777" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn ghost" href="https://github.com/sebastianx777" target="_blank" rel="noopener">GitHub</a>
     </div>
   </header>
@@ -267,18 +290,46 @@
     <h2 class="section-title">Experience</h2>
 
     <div class="role">
-      <div class="when">Jan – May 2026</div>
+      <div class="when">Jan 2025 – May 2026</div>
       <div>
         <h3>Customer Engineer, Analytics <span>· Equinix</span></h3>
-        <p>Built Power BI dashboards including a Product Engineering metrics dashboard and a TAM Churn Analysis, backed by end-to-end SQL pipelines and custom DAX measures.</p>
-      </div>
-    </div>
 
-    <div class="role">
-      <div class="when">May – Aug 2024</div>
-      <div>
-        <h3>Analytics Intern <span>· Equinix</span></h3>
-        <p>Early exposure to the same reporting stack — SQL, Power BI, and DAX — that became the foundation for the full-time role.</p>
+        <div class="sub-role">
+          <h4>Operational Metrics Dashboard — Product Engineering</h4>
+          <ul class="role-list">
+            <li>Built a centralized, real-time Power BI dashboard with DAX measures tracking ticket volume, age, and priority across the full product line, giving support leadership a single live view of the queue.</li>
+            <li>Added multi-dimensional filtering (age, priority, customer tier) so leadership could pinpoint which products and customer segments consumed the most support resources.</li>
+            <li>Maintained the dashboard to correlate case spikes with system outages, making the link between incidents and queue overflow visible so teams could reallocate resources proactively.</li>
+            <li>Modeled raw case data into clean KPI tables that surfaced high-volume products and recurring issue types for cross-team triage.</li>
+          </ul>
+        </div>
+
+        <div class="sub-role">
+          <h4>Reporting Automation — Technical Account Manager Churn Analysis</h4>
+          <ul class="role-list">
+            <li>Built an interactive Power BI dashboard combining customer sentiment and operational metrics with automated reporting, cutting manual report generation time by ~60%.</li>
+            <li>Created real-time tracking of customer feedback trends and open support cases, giving account managers an at-a-glance read on which accounts were trending toward churn.</li>
+            <li>Improved &amp; maintained a Power BI dashboard and built custom DAX measures that surfaced churn signals and sentiment shifts hidden in the raw case data.</li>
+          </ul>
+        </div>
+
+        <div class="sub-role">
+          <h4>Customer Engineering — Power BI Dashboard</h4>
+          <ul class="role-list">
+            <li>Built an interactive Power BI dashboard tracking average case resolution time and weekly case volume, with drill-down from weekly to quarterly and yearly views for trend analysis.</li>
+            <li>Added agent-level performance tracking — case totals by day, quarter, and year — giving leadership clear visibility into individual and team throughput.</li>
+            <li>Structured the underlying data model by product type, case priority, and case age, so leadership could filter to where resolution bottlenecks were forming.</li>
+          </ul>
+        </div>
+
+        <div class="sub-role">
+          <h4>Customer Engineering</h4>
+          <ul class="role-list">
+            <li>Resolved 1,000+ customer tickets spanning abuse cases, DDoS mitigation, and BGP requests, troubleshooting complex networking issues directly with customers.</li>
+            <li>Wrote internal documentation for customer-case handling and server troubleshooting, assisting new-hire onboarding.</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -306,7 +357,7 @@
 
   <footer>
     <span>Built by Sebastian Lopez Cordoba</span>
-    <span><a href="mailto:sebastian.lopezcordoba@example.com">sebastian.lopezcordoba@example.com</a></span>
+    <span><a href="mailto:sebastianlopez00174@gmail.com">sebastianlopez00174@gmail.com</a></span>
   </footer>
 
 </div>
