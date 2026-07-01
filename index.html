@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sebastian Lopez Cordoba — Data & BI Analyst</title>
+<meta name="description" content="Sebastian Lopez Cordoba. Data/BI Analyst — SQL, Power BI, DAX, Python. Based in DFW.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #262624;
+    --card: #2D2C2A;
+    --line: #3E3D3A;
+    --text: #F0EEE6;
+    --text-dim: #ABA9A0;
+    --accent: #CC785C;
+    --accent-soft: #3D2B22;
+    --sans: 'Inter', system-ui, sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; }
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- Header ---------- */
+  header.hero{
+    padding:88px 0 56px;
+  }
+
+  .avatar{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:28px;
+  }
+
+  h1.name{
+    font-family:var(--serif);
+    font-size:clamp(32px, 5vw, 44px);
+    font-weight:600;
+    letter-spacing:-.01em;
+    line-height:1.15;
+    margin-bottom:12px;
+    color:var(--text);
+  }
+
+  .role-line{
+    font-size:18px;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:20px;
+  }
+
+  .tagline{
+    font-size:17px;
+    color:var(--text-dim);
+    max-width:56ch;
+    margin-bottom:32px;
+  }
+
+  .actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-size:14.5px;
+    font-weight:600;
+    padding:11px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:opacity .15s ease, transform .12s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn.primary{
+    background:var(--accent);
+    color:#fff;
+  }
+  .btn.primary:hover{ opacity:.92; }
+  .btn.ghost{
+    color:var(--text);
+    background:var(--card);
+    border:1px solid var(--line);
+  }
+  .btn.ghost:hover{ border-color:var(--accent); color:var(--accent); }
+
+  /* ---------- Section shell ---------- */
+  section{ padding:44px 0; border-top:1px solid var(--line); }
+
+  .section-title{
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:24px;
+  }
+
+  /* ---------- Skills ---------- */
+  .skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .tag{
+    font-size:14px;
+    font-weight:500;
+    padding:8px 16px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    border-radius:20px;
+  }
+
+  /* ---------- Experience ---------- */
+  .role{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:20px;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+  .role:first-of-type{ border-top:none; padding-top:0; }
+  .role .when{
+    font-size:14px;
+    color:var(--text-dim);
+    padding-top:2px;
+  }
+  .role h3{
+    font-size:16.5px;
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .role h3 span{ color:var(--text-dim); font-weight:400; }
+  .role p{
+    color:var(--text-dim);
+    font-size:15px;
+    max-width:60ch;
+  }
+
+  /* ---------- Projects ---------- */
+  .project{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px;
+    margin-bottom:16px;
+    transition:box-shadow .15s ease, transform .15s ease;
+  }
+  .project:hover{
+    box-shadow:0 4px 24px rgba(0,0,0,.35);
+    border-color:#443F37;
+    transform:translateY(-1px);
+  }
+  .project-head{
+    margin-bottom:8px;
+  }
+  .project h3{ font-size:18px; font-weight:600; margin-bottom:6px; }
+  .project .stack{
+    font-size:13px;
+    color:var(--text-dim);
+  }
+  .project p{
+    color:var(--text-dim);
+    font-size:15px;
+    margin:14px 0 18px;
+    max-width:62ch;
+  }
+  .project .links{
+    display:flex;
+    gap:20px;
+    font-size:14px;
+    font-weight:600;
+  }
+  .project .links a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+  .project .links a:hover{ text-decoration:underline; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:40px 0 60px;
+    font-size:14px;
+    color:var(--text-dim);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    border-top:1px solid var(--line);
+  }
+  footer a{ color:var(--text-dim); text-decoration:none; }
+  footer a:hover{ color:var(--accent); }
+
+  @media (max-width: 640px){
+    .role{ grid-template-columns:1fr; gap:4px; }
+    header.hero{ padding:56px 0 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="avatar">SL</div>
+    <h1 class="name">Sebastian Lopez Cordoba</h1>
+    <div class="role-line">Data / BI Analyst</div>
+    <p class="tagline">
+      I build reporting that makes messy data legible — SQL pipelines, Power BI dashboards,
+      and DAX measures that hold up under real questions. Based in DFW, open to analyst
+      &amp; BI roles.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/sebastianlopezcordoba" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/sebastianlopezcordoba" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill-tags">
+      <span class="tag">SQL</span>
+      <span class="tag">Power BI / DAX</span>
+      <span class="tag">Python / pandas</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">Power Query</span>
+      <span class="tag">Data Cleaning &amp; ETL</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="role">
+      <div class="when">Jan – May 2026</div>
+      <div>
+        <h3>Customer Engineer, Analytics <span>· Equinix</span></h3>
+        <p>Built Power BI dashboards including a Product Engineering metrics dashboard and a TAM Churn Analysis, backed by end-to-end SQL pipelines and custom DAX measures.</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="when">May – Aug 2024</div>
+      <div>
+        <h3>Analytics Intern <span>· Equinix</span></h3>
+        <p>Early exposure to the same reporting stack — SQL, Power BI, and DAX — that became the foundation for the full-time role.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>TMDB Movie Performance Dashboard</h3>
+        <div class="stack">pandas · Power Query · Power BI · DAX</div>
+      </div>
+      <p>
+        Cleaned a ~9,800-row movie dataset in pandas, then built a Power BI dashboard analyzing
+        genre, language, and rating trends — including a scatter plot that surfaces where
+        popularity and quality genuinely diverge.
+      </p>
+      <div class="links">
+        <a href="#" target="_blank" rel="noopener">View live dashboard →</a>
+        <a href="#" target="_blank" rel="noopener">GitHub repo →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <span>Built by Sebastian Lopez Cordoba</span>
+    <span><a href="mailto:sebastian.lopezcordoba@example.com">sebastian.lopezcordoba@example.com</a></span>
+  </footer>
+
+</div>
+
+</body>
+</html>
